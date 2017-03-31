@@ -1,0 +1,3953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AutoBrew</class>
+ <widget class="QMainWindow" name="AutoBrew">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Tabs">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="TestorProd">
+     <attribute name="title">
+      <string>Test</string>
+     </attribute>
+     <widget class="QLabel" name="PageHeading">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>771</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Fred's AutoBrew Brewing System Start</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="TestPCButton">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>220</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Test PC</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TestVerbiage">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>300</y>
+        <width>211</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Float switches, temperature sensors deactivated</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LivePiButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Live Pi</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="TestPiButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>220</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Test Pi</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LivePCButton">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>120</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Live PC</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="RecipeTab">
+     <attribute name="title">
+      <string>Recipe</string>
+     </attribute>
+     <widget class="QSpinBox" name="Rest5Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>120</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest6Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>311</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>55</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExitButtonRecipe">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>280</y>
+        <width>93</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest2Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>112</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest4Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>210</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>120</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest4Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>211</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest6Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>310</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>120</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>20</y>
+        <width>55</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest2Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>120</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest1Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>61</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BrewButton">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>170</y>
+        <width>93</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Schedule</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest3Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest3Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>160</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>120</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest5Temp">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>261</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Rest1Time">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>60</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest1Button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest2Button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest3Button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest4Button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest5Button">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>30</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest6Button">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>120</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest7Button">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>210</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rest8Button">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>300</y>
+        <width>111</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ScheduleTab">
+     <attribute name="title">
+      <string>Schedule</string>
+     </attribute>
+     <widget class="QTextEdit" name="ScheduleBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>731</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>10</pointsize>
+        <kerning>false</kerning>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Step</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Brew Time</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>50</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>20</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>+----- Start at -----+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>50</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Clock Time</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>20</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>20</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="AutoBrewTab">
+     <attribute name="title">
+      <string>AutoBrew</string>
+     </attribute>
+     <widget class="QLineEdit" name="TimeOfDay">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>10</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Elapsed Time:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TotalElapsedTime">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Time of Day:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Step</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>80</y>
+        <width>55</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Began</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Elapsed</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>60</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Time to</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>80</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Next Step</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentRecipeStepName">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>120</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentRecipeStepElapsed">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>120</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentRecipeStepTimeToNext">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>120</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentRecipeStepBegan">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>120</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentTempStepHLTElapsed">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>160</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentTempStepHLTTimeToNext">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>160</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentTempStepHLTBegan">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>160</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>160</y>
+        <width>55</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Upcoming:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>330</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>250</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Recipe Step</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>250</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Begins at</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UpcomingRecipeStepBegins">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>290</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UpcomingRecipeStepName">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>290</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UpcomingHLTBegins">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>330</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentTempStepMashSet">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>120</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentTempStepHLTSet">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>160</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UpcomingMashTempSet">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>290</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UpcomingHLTTempSet">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>330</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="StartButton">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>300</y>
+        <width>93</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExitButtonAutoBrew">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>300</y>
+        <width>93</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentMashTempLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>90</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AutobrewCurrentMashTempDisplay">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>120</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentMashTempLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current Temps</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AutobrewCurrentHLTTempDisplay">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>120</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>210</y>
+        <width>55</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pump</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AutobrewPumpStatus">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>240</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AutobrewHLTStatus">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>240</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>55</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>250</y>
+        <width>55</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentMashTempLabel_4">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>90</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>210</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Burner</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentMashTempLabel_5">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>170</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Equip Status</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ManualControlTab">
+     <attribute name="title">
+      <string>Manual Control</string>
+     </attribute>
+     <widget class="QLabel" name="PumpRunningLabel">
+      <property name="geometry">
+       <rect>
+        <x>458</x>
+        <y>30</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pump:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentMashTempLabel">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current Temp</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RespectMashFloatSwitchPump">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>130</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stop when mash tun is full</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurrentHLTTempLabel">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>220</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current Temp</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PumpOn">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>100</y>
+        <width>93</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>On</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RespectHLTTempSet">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>260</y>
+        <width>271</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stop at set temperature</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="HLTOn">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>260</y>
+        <width>93</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>On</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="MashFloatText">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>30</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="placeholderText">
+       <string>Down</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RespectHLTFloatSwitchHLT">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>290</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stop when HLT is empty</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MashFloatLabel">
+      <property name="geometry">
+       <rect>
+        <x>598</x>
+        <y>30</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash F/S:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HLTRunningLabel">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>60</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MashTempSetLabel">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>60</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HLTTempSetLabel">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>220</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PumpLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pump</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RespectHLTFloatSwitchPump">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>170</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stop when HLT is empty</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentMashTempDisplay">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>100</y>
+        <width>71</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="MashTempSet">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>100</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px groove gray} 
+QSpinBox::up-button { subcontrol-position: top right; width: 40px; height: 40px;}
+QSpinBox::down-button { subcontrol-position: bottom right; width: 40px; height: 40px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RespectMashTempSet">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>80</y>
+        <width>271</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stop at set temperature</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="HLTRunningText">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>60</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="placeholderText">
+       <string>Stopped</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Go">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>330</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="HLTTempSet">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>260</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px groove gray} 
+QSpinBox::up-button { subcontrol-position: top right; width: 40px; height: 40px;}
+QSpinBox::down-button { subcontrol-position: bottom right; width: 40px; height: 40px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>110</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HLTFloatLabel">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>60</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT F/S:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PumpRunningText">
+      <property name="geometry">
+       <rect>
+        <x>518</x>
+        <y>30</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="placeholderText">
+       <string>Stopped</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HLTLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="HLTOff">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>93</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>Off</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PumpOff">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>93</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>Off</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CurrentHLTTempDisplay">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>260</y>
+        <width>71</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px groove gray
+</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="HLTFloatText">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>60</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="placeholderText">
+       <string>Up</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ReturntoSessionButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>330</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Log_Tab">
+     <attribute name="title">
+      <string>Log</string>
+     </attribute>
+     <widget class="QTextEdit" name="LogBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>761</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExportLogButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>330</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Export to .csv</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ChartTab">
+     <attribute name="title">
+      <string>Chart</string>
+     </attribute>
+     <widget class="QPushButton" name="ExportChartButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>330</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Export to .csv</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="ChartBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>771</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SettingsTab">
+     <attribute name="title">
+      <string>Settings</string>
+     </attribute>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>40</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Tun / HLT Differential (Degrees)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>160</y>
+        <width>441</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Tun Temperature Drop on Mash In</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>100</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HLT Raise Time (Degrees per Minute)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="MTHLTDifferential">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>40</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox { border: 1px inset grey; } 
+QDoubleSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QDoubleSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>12.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>220</y>
+        <width>441</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Tun Raise Time (Degrees per Minute)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="HLTRaiseTime">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox { border: 1px inset grey; } 
+QDoubleSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QDoubleSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.700000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="MTTempDrop">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>160</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox { border: 1px inset grey; } 
+QDoubleSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QDoubleSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>7.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="MTRaiseTime">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>220</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox { border: 1px inset grey; } 
+QDoubleSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QDoubleSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.700000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TwilioLabel1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>270</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Twilio SID:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TwilioLabel2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>300</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Auth Token:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TwilioLabel3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>330</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Twilio Phone:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TwilioLabel4">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>360</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Send to #:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TwilioSID">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>270</y>
+        <width>381</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ACe6ba2ebf969770296498f6ae5a12b3ce</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TwilioAuthToken">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>300</y>
+        <width>351</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>c67b52a7631ac3d7fd5ae98dc1ca2339</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TwilioPhone">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>330</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+19412020403</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TwilioSendTo">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>360</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+19415499312</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Rests</string>
+     </attribute>
+     <widget class="QSpinBox" name="DRest3Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>160</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest2Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>122</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>122</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest3Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>160</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>133</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest6Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>280</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>154</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest5Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>240</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>60</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>40</y>
+        <width>55</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest6Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>279</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>60</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest4Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>140</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest5Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>241</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>150</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest1Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>80</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>104</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>55</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest2Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>120</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest4Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>200</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>60</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest1Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>79</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>15</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest7Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>320</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>30</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest7Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>320</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>158</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest8Time">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>360</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="DRest8Temp">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>360</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox { border: 1px inset grey; } 
+QSpinBox::up-button { subcontrol-position: left; width: 40px; height: 35px;}
+QSpinBox::down-button { subcontrol-position: right; width: 40px; height: 35px;}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="specialValueText">
+       <string/>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>168</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest1Name">
+      <property name="geometry">
+       <rect>
+        <x>92</x>
+        <y>80</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Acid Rest</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest2Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>120</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Peptidase Rest</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest3Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>160</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Proteinase Rest</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest4Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>200</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Beta Rest</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest5Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>240</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dry Moderate</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest6Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>280</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Body Moderate</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest7Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>320</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Alpha Rest</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DRest8Name">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>360</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mash Out</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest1Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest2Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest3Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>160</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest4Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest5Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest6Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>280</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest7Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DRest8Check">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>360</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+     width: 30px;
+     height: 30px;
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_43">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Default?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="GenerateRecipeButton">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>300</y>
+        <width>93</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate
+Recipe</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
